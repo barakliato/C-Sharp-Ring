@@ -8,7 +8,7 @@ an exmaple of use:<br />
 ConcurrentRing<int> ring = new ConcurrentRing<int>(500);<br />
 Action a1 = () =><br />
 {<br />
-____while (true)<br />
+    while (true)<br />
     {<br />
 _______ring.Write(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });<br />
 _______Task.Delay(25).Wait();<br />
