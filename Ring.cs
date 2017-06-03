@@ -1,4 +1,4 @@
-public class ConcurrentRing<T>
+public class Ring<T>
     {
         private readonly T[] _buffer;
         
