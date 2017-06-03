@@ -1,4 +1,4 @@
-# ConcurrentRing <br />
+# C# Ring <br />
 C# implementation for ring <br />
 <br />
 I was initially built it to support a connection buffer that recieve information in high rate. <br />
