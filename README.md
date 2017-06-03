@@ -7,7 +7,7 @@ reading the last information discarding information too old. <br />
 <br />
 an exmaple of use:<br />
 ```C#
-ConcurrentRing<int> ring = new ConcurrentRing<int>(500);
+Ring<int> ring = new Ring<int>(500);
 Action a1 = () =>
 {
     while (true)
