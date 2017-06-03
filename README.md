@@ -1,16 +1,16 @@
-# ConcurrentRing
-C# thread safe implementation for ring as a replacement for a consumer producer queue
-
-The class was built to support a connection buffer where one thread write from the connection and the other thread read from it.
-The implementation provide an alternative to a consumer producer queue where it required a contiguous block of information without locks.
-an exmaple of use:
-
-ConcurrentRing<int> ring = new ConcurrentRing<int>(500);
-Action a1 = () =>
-{
-    while (true)
-    {
-        ring.Write(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+# ConcurrentRing <br />
+C# thread safe implementation for ring as a replacement for a consumer producer queue <br />
+<br />
+The class was built to support a connection buffer where one thread write from the connection and the other thread read from it. <br />
+The implementation provide an alternative to a consumer producer queue where it required a contiguous block of information without locks. <br /><br />
+an exmaple of use:<br />
+<br />
+ConcurrentRing<int> ring = new ConcurrentRing<int>(500);<br />
+Action a1 = () =><br />
+{<br />
+    while (true)<br />
+    {<br />
+        ring.Write(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });<br />
         Task.Delay(25).Wait();
     }
 };
