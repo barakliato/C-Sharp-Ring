@@ -3,7 +3,6 @@ C# implementation for ring <br />
 <br />
 I was initially built it to support a connection buffer that recieve information in high rate. <br />
 It was built with porpuse to provide an alternative to a consumer producer queue in order to have a fixed size buffer while always
-<br />
 reading the last information discarding information too old. <br />
 an exmaple of use:<br />
 <br />
