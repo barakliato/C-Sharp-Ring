@@ -1,5 +1,5 @@
 # ConcurrentRing <br />
-C# thread safe implementation for ring as a replacement for a consumer producer queue <br />
+C# implementation for ring <br />
 <br />
 The class was built to support a connection buffer where one thread write from the connection and the other thread read from it. <br />
 The implementation provide an alternative to a consumer producer queue where it required a contiguous block of information without locks. <br /><br />
