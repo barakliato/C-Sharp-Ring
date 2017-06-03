@@ -8,24 +8,24 @@ an exmaple of use:<br />
 ConcurrentRing<int> ring = new ConcurrentRing<int>(500);<br />
 Action a1 = () =><br />
 {<br />
-    while (true)<br />
+____while (true)<br />
     {<br />
-        ring.Write(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });<br />
-        Task.Delay(25).Wait();<br />
-    }<br />
+_______ring.Write(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });<br />
+_______Task.Delay(25).Wait();<br />
+____}<br />
 };<br />
 <br />
 Action a2 = () =><br />
 {<br />
-    while (true)<br />
-    {<br />
-        var items = ring.Read(10);<br />
-        foreach (var item in items)<br />
-            Console.Write("{0} ", item);<br />
+____while (true)<br />
+____{<br />
+________var items = ring.Read(10);<br />
+________foreach (var item in items)<br />
+________Console.Write("{0} ", item);<br />
 <br />
-        Console.WriteLine();<br />
-        Task.Delay(10).Wait();<br />
-    }<br />
+________Console.WriteLine();<br />
+________Task.Delay(10).Wait();<br />
+____}<br />
 };<br />
 <br />
 var t1 = Task.Run(a1);<br />
