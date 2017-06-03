@@ -5,7 +5,6 @@ The class was built to support a connection buffer where one thread write from t
 The implementation provide an alternative to a consumer producer queue where it required a contiguous block of information without locks.
 an exmaple of use:
 
-<code>
 ConcurrentRing<int> ring = new ConcurrentRing<int>(500);
 Action a1 = () =>
 {
@@ -32,4 +31,3 @@ Action a2 = () =>
 var t1 = Task.Run(a1);
 var t2 = Task.Run(a2);
 Task.WaitAll(t1, t2);
-</code>
