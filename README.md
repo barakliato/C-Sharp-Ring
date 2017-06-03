@@ -1,8 +1,10 @@
 # ConcurrentRing <br />
 C# implementation for ring <br />
 <br />
-The class was built to support a connection buffer where one thread write from the connection and the other thread read from it. <br />
-The implementation provide an alternative to a consumer producer queue where it required a contiguous block of information without locks. <br /><br />
+I was initially built it to support a connectino buffer that recieved information in high rate. <br />
+It was built with porpuse to provide an alternative to a consumer producer queue in order to have a fixed size buffer while always
+<br />
+reading the last information discarding information too old. <br />
 an exmaple of use:<br />
 <br />
 ```C#
