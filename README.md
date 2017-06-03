@@ -11,23 +11,23 @@ Action a1 = () =><br />
     while (true)<br />
     {<br />
         ring.Write(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });<br />
-        Task.Delay(25).Wait();
-    }
-};
-
-Action a2 = () =>
-{
-    while (true)
-    {
-        var items = ring.Read(10);
-        foreach (var item in items)
-            Console.Write("{0} ", item);
-
-        Console.WriteLine();
-        Task.Delay(10).Wait();
-    }
-};
-
-var t1 = Task.Run(a1);
-var t2 = Task.Run(a2);
-Task.WaitAll(t1, t2);
+        Task.Delay(25).Wait();<br />
+    }<br />
+};<br />
+<br />
+Action a2 = () =><br />
+{<br />
+    while (true)<br />
+    {<br />
+        var items = ring.Read(10);<br />
+        foreach (var item in items)<br />
+            Console.Write("{0} ", item);<br />
+<br />
+        Console.WriteLine();<br />
+        Task.Delay(10).Wait();<br />
+    }<br />
+};<br />
+<br />
+var t1 = Task.Run(a1);<br />
+var t2 = Task.Run(a2);<br />
+Task.WaitAll(t1, t2);<br />
