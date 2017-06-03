@@ -32,8 +32,7 @@ Action a2 = () =>
 var t1 = Task.Run(a1);
 var t2 = Task.Run(a2);
 Task.WaitAll(t1, t2);
-```
-<br />
+
 /*
  * ----------------------------------------------------------------------------
  * "THE BEER-WARE LICENSE" (Revision 42):
@@ -42,3 +41,4 @@ Task.WaitAll(t1, t2);
  * this stuff is worth it, you can buy me a beer in return Barak Liato
  * ----------------------------------------------------------------------------
  */
+```
